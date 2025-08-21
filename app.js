@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const apiRoutes = require('../sai/lojaNodeBackend/routes/api.js');
+const apiRoutes = require('./routes/api.js');
 
 const app = express();
 

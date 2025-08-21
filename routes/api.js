@@ -3,7 +3,7 @@ const router = express.Router();
 
 const productController = require('../controllers/ProductController');
 const cartController = require('../controllers/CartController');
-const upload = require('../../sai/lojaNodeBackend/middlewares/upload.js');
+const upload = require('../middlewares/upload.js');
 
 // Endpoint para obter detalhes de um produto pelo id
 router.get('/products/:id', productController.getProductById);

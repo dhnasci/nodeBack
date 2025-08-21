@@ -2,8 +2,7 @@
   "name": "teste",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "server.js",
   "scripts": {
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.js",
@@ -20,6 +19,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
   }
 }
