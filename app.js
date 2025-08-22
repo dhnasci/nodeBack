@@ -1,8 +1,12 @@
 const express = require('express');
 const path = require('path');
 const apiRoutes = require('./routes/api.js');
+const cors = require('cors');
 
 const app = express();
+
+// Middleware libera o bloqueio de CORS
+app.use(cors());
 
 // Middleware para parse de JSON
 app.use(express.json());
