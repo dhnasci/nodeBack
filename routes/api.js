@@ -8,6 +8,9 @@ const upload = require('../middlewares/upload.js');
 // Endpoint para obter detalhes de um produto pelo id
 router.get('/products/:id', productController.getProductById);
 
+// Endpoint para listar todos os produtos
+router.get('/products', productController.listAllProducts);
+
 // Endpoint para adicionar um produto ao carrinho
 router.post('/cart/add', cartController.addProduct);
 

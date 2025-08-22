@@ -17,6 +17,18 @@ class ProductService {
         }
         return product;
     }
+
+    /**
+     * Lista todos os produtos cadastrados
+     * @returns {Product[]}
+     */
+    listaAll()  {
+        const produtcs = productRepository.listAllProducts();
+        if (!produtcs) {
+            throw new Error('Produtos não cadastrados');
+        }
+        return produtcs;
+    }
 }
 
 module.exports = new ProductService();

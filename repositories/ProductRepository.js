@@ -21,6 +21,15 @@ class ProductRepository {
     findById(id) {
         return this.products.find(prod => prod.id === parseInt(id));
     }
+
+    /**
+     * Lista todos os produtos disponíveis
+     * @returns {Product[]}
+     */
+    listAllProducts() {
+        return this.products;
+    }
+
 }
 
 module.exports = new ProductRepository();
