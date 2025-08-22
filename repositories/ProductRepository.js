@@ -9,8 +9,8 @@ class ProductRepository {
     constructor() {
         this.products = [];
         // Produtos iniciais para teste
-        this.products.push(new Product(1, 'uploads/sample.jpg', 'Produto 1', 10.0, 'Descrição do produto 1'));
-        this.products.push(new Product(2, 'uploads/sample2.jpg', 'Produto 2', 20.0, 'Descrição do produto 2'));
+        this.products.push(new Product(1, 'uploads/sample.png', 'Produto 1', 10.0, 'Descrição do produto 1'));
+        this.products.push(new Product(2, 'uploads/sample2.png', 'Produto 2', 20.0, 'Descrição do produto 2'));
     }
 
     /**
