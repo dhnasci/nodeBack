@@ -34,6 +34,22 @@ class CartController {
             return res.status(500).json({ error: err.message });
         }
     }
+
+    /**
+     * Remove um produto ao carrinho
+     * Espera { productId: number } no corpo da requisição
+     * @param {Request} req
+     * @param {Response} res
+     */
+    async deleteCart(req, res) {
+        try {
+            const { productId } = req.body;
+            cartService.removeProductFromCart(productId)
+            return res.json({message: 'Produto removido do carrinho com sucesso'})
+        } catch (err) {
+            return res.status(400).json({ error: err.message });
+        }
+    }
 }
 
 module.exports = new CartController();

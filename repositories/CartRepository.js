@@ -24,6 +24,24 @@ class CartRepository {
     }
 
     /**
+     * Retira um produto do carrinho, decrementando a quantidade ou removendo
+     * @param {number|string} productId
+     */
+    removeProduct(productId) {
+        const id = parseInt(productId, 10);
+        const index = this.cart.findIndex(item => item.product.id === id);
+        if (index !== -1) {
+            if (this.cart[index].quantity > 1) {
+                this.cart[index].quantity -= 1;
+            } else {
+                this.cart.splice(index, 1);
+            }
+        } else {
+            throw Error('Produto não existe')
+        }
+    }
+
+    /**
      * Retorna todos os itens do carrinho
      * @returns {{product: Product, quantity: number}[]}
      */

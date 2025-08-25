@@ -28,6 +28,10 @@ class CartService {
     getCart() {
         return cartRepository.getCart();
     }
+
+    removeProductFromCart(productId) {
+        cartRepository.removeProduct(productId);
+    }
 }
 
 module.exports = new CartService();

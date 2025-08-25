@@ -17,4 +17,7 @@ router.post('/cart/add', cartController.addProduct);
 // Endpoint para listar os produtos presentes no carrinho
 router.get('/cart', cartController.getCart);
 
+// Endpoint para remover um produto do carrinho
+router.delete('/cart', cartController.deleteCart);
+
 module.exports = router;
