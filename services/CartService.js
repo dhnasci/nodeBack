@@ -29,8 +29,13 @@ class CartService {
         return cartRepository.getCart();
     }
 
+    /**
+     * Remove um produto ao carrinho pelo seu id
+     * @param {number} productId
+     * @returns {Product}
+     */
     removeProductFromCart(productId) {
-        cartRepository.removeProduct(productId);
+        return cartRepository.removeProduct(productId);
     }
 }
 

@@ -44,8 +44,8 @@ class CartController {
     async deleteCart(req, res) {
         try {
             const { productId } = req.body;
-            cartService.removeProductFromCart(productId)
-            return res.json({message: 'Produto removido do carrinho com sucesso'})
+            const cart = cartService.removeProductFromCart(productId)
+            return res.json({message: 'Produto removido do carrinho com sucesso', cart})
         } catch (err) {
             return res.status(400).json({ error: err.message });
         }

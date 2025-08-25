@@ -39,6 +39,7 @@ class CartRepository {
         } else {
             throw Error('Produto não existe')
         }
+        return this.cart
     }
 
     /**
