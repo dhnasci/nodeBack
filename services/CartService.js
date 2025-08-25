@@ -1,5 +1,6 @@
 const cartRepository = require('../repositories/CartRepository');
 const productRepository = require('../repositories/ProductRepository');
+const productService = require('../services/ProductService');
 
 /**
  * Serviço para gerenciar as ações do carrinho de compras
@@ -12,7 +13,7 @@ class CartService {
      * @returns {Product}
      */
     addProductToCart(productId) {
-        const product = productRepository.findById(productId);
+        const product = productService.getProductById(productId);
         if (!product) {
             throw new Error('Produto não encontrado');
         }

@@ -18,7 +18,7 @@ class CartRepository {
 
     /**
      * Retorna todos os produtos do carrinho
-     * @returns {Array}
+     * @returns {Product[]}
      */
     getCart() {
         return this.cart;
