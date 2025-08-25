@@ -11,6 +11,8 @@ class ProductRepository {
         // Produtos iniciais para teste
         this.products.push(new Product(1, 'uploads/sample.png', 'Produto 1', 10.0, 'Descrição do produto 1'));
         this.products.push(new Product(2, 'uploads/sample2.png', 'Produto 2', 20.0, 'Descrição do produto 2'));
+        this.products.push(new Product(3, 'uploads/sample3.jpg', 'Produto 3', 32.50, 'Descrição do produto 3'));
+        this.products.push(new Product(4, 'uploads/sample4.png', 'Produto 4', 69.25, 'Descrição do produto 4'));
     }
 
     /**
