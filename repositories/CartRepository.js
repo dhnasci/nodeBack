@@ -5,20 +5,27 @@
  */
 class CartRepository {
     constructor() {
+        // cart é um array de objetos { product, quantity }
         this.cart = [];
     }
 
     /**
      * Adiciona um produto ao carrinho
+     * Se já existir, incrementa a quantidade.
      * @param {Product} product 
      */
     addProduct(product) {
-        this.cart.push(product);
+        const item = this.cart.find(item => item.product.id === product.id);
+        if (item) {
+            item.quantity += 1;
+        } else {
+            this.cart.push({ product, quantity: 1 });
+        }
     }
 
     /**
-     * Retorna todos os produtos do carrinho
-     * @returns {Product[]}
+     * Retorna todos os itens do carrinho
+     * @returns {{product: Product, quantity: number}[]}
      */
     getCart() {
         return this.cart;
